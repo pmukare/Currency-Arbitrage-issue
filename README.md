@@ -26,3 +26,41 @@ Each of the N subsequent lines describes a quote in the form of three space-sepa
 3.	The third quote is a real number denoting the price quote for (GBP/USD).
 
 Your function takes a string array parameter containing each of the N lines as described above, in the same order.
+
+
+Constraints
+
+1 ≤ N ≤ 1000
+0.001 < quotes ≤ 1000
+
+
+
+Output Format
+
+The function must return an integer array that contains the arbitrage profit for each trade in the same order that they appear in the input. If no arbitrage opportunity exists, set that profit to 0 . The resulting array should have a total of N elements.
+
+
+Sample Input
+
+
+2
+1.1837 1.3829 0.6102
+1.1234 1.2134 1.2311
+
+
+
+Sample Output
+
+
+114
+0
+
+
+
+Explanation
+
+There are N = 2 test cases:
+
+1. You use your 100,000 USD to buy 84,480.8651 EUR. You then use your 84,480.8651 EUR to buy 61,089.6414 GBP. Finally, you use your 61,089.6414 GBP to buy 100,114.1288 USD. Because we started out with 100,000 USD, our net profit in whole dollars is 114 USD.
+
+2. There is no arbitrage opportunity here (the conversion would end up losing money), so we print 0.
